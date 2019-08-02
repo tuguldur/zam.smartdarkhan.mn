@@ -21,7 +21,7 @@
                                  <br>
                                  </label>
                                  <input class="form-control" type="text" placeholder="XXXXУБА" name="search" style="font-family: 'Roboto Condensed', sans-serif;" id="check-input" required autocomplete="off"/>
-                              </div>
+                           </div>
                            </div>
                            <div class="col">
                               <div class="form-group">

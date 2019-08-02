@@ -48,11 +48,11 @@ class paymentController extends Controller
                 ->orWhere('type','LIKE','%'.$search.'%')
                 ->orWhere('year','LIKE','%'.$search.'%')
                 ->orWhere('amount','LIKE','%'.$search.'%')
-                ->orWhere('status','LIKE','%'.$search.'%')->get();
+                ->orWhere('status','LIKE','%'.$search.'%')->limit(100)->get();
                 return response()->json($payment);
     }
     public function check($car_number){
-        $payment = payment::where('car_number','LIKE',''.$car_number.'')->get();
+        $payment = payment::where('car_number','LIKE','%'.$car_number.'%')->get();
         return response()->json($payment);
     }
 }

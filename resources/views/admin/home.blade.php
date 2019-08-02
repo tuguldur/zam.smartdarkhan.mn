@@ -7,13 +7,16 @@
         <div class="card-header d-flex">
           <h4 class="card-title mr-3">Payments</h4>
           <div class="input-group no-border">
-              <input type="text" value="" class="form-control" placeholder="Хайх...">
+            <form id="search-data"> 
+              <input type="text" class="form-control" placeholder="Хайх..." id="search-data-input" required autocomplete="off">
               <div class="input-group-append">
                 <div class="input-group-text">
                   <i class="nc-icon nc-zoom-split"></i>
                 </div>
               </div>
+              <a href="#" class="p-3" id="load-data">Reset</a>
               <a href="#" class="p-3" data-toggle="modal" data-target="#add-payment">Нэмэх</a>
+            </form>
             </div>
         </div>
         <div class="card-body">
@@ -61,6 +64,7 @@
             </button>
           </div>
           <form action="/admin/payment" method="POST">
+            <input type="hidden" id="data-id" value="0">
           <div class="modal-body">
               <div class="form-group">
                   <label>Улсын дугаар</label>
@@ -89,7 +93,7 @@
           </div>
           <div class="row mb-3">
               <div class="update ml-auto mr-auto">
-                <button type="submit" class="btn btn-primary btn-round">Нэмэх</button>
+                <button type="submit" class="btn btn-primary btn-round">Хадгалах</button>
               </div>
           </div>
           @csrf

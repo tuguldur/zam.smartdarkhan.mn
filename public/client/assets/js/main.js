@@ -8,15 +8,17 @@
             .trim();
         var check = value.replace(/ /g, "");
         if (regex.test(check)) {
+            $("#result-text").html("");
             $.get(`/check/${check.toUpperCase()}`, function(datas) {
                 console.log(datas);
                 if (datas === undefined || datas.length == 0) {
-                    $("#result-text").html(
+                    $("#search-result").html(
                         `<small class="form-text" style="color: rgb(235,13,13);font-family: 'Roboto Condensed', sans-serif;font-size: 16px;margin: -1px;"><strong>ТАНЫ МЭДЭЭЛЭЛ ОЛДСОНГҮЙ&nbsp;</strong></small>`
                     );
                     $("#search-found").addClass("d-none");
                     console.log("no data");
                 } else if (datas) {
+                    $("#search-result").html("");
                     datas.forEach(data => {
                         $("#search-result").append(`
                     <tr>
@@ -25,7 +27,7 @@
                     <td>${data.type}</td>
                     <td>${data.year}</td>
                     <td>${data.amount}₮</td>
-                    <td>${status}</td>
+                    <td>${data.status}</td>
                  </tr>`);
                     });
                     $("#result-text").html(

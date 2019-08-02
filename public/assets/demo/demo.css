@@ -397,3 +397,7 @@ p[data-f-id="pbf"] {
 .dev-modal .modal-content {
     border-radius: 16px !important;
 }
+#search-data {
+    display: flex;
+    width: 100%;
+}
