@@ -12,12 +12,12 @@
             $.get(`/check/${check.toUpperCase()}`, function(datas) {
                 console.log(datas);
                 if (datas === undefined || datas.length == 0) {
-                    $("#search-result").html(
+                    $("#result-text").html(
                         `<small class="form-text" style="color: rgb(235,13,13);font-family: 'Roboto Condensed', sans-serif;font-size: 16px;margin: -1px;"><strong>ТАНЫ МЭДЭЭЛЭЛ ОЛДСОНГҮЙ&nbsp;</strong></small>`
                     );
                     $("#search-found").addClass("d-none");
                     console.log("no data");
-                } else if (datas) {
+                } else {
                     $("#search-result").html("");
                     datas.forEach(data => {
                         $("#search-result").append(`
@@ -34,12 +34,6 @@
                         `<small class="form-text" style="color: rgb(15,217,11);font-family: 'Roboto Condensed', sans-serif;font-size: 16px;margin: -1px;"><strong>САНГААС ТАНЫ МЭДЭЭЛЭЛ ОЛДЛОО&nbsp;</strong></small>`
                     );
                     $("#search-found").removeClass("d-none");
-                } else {
-                    $("#result-text").html(
-                        `<small class="form-text" style="color: rgb(235,13,13);font-family: 'Roboto Condensed', sans-serif;font-size: 16px;margin: -1px;"><strong>ТАНЫ МЭДЭЭЛЭЛ ОЛДСОНГҮЙ&nbsp;</strong></small>`
-                    );
-                    $("#search-found").addClass("d-none");
-                    console.log("no data");
                 }
             });
         } else

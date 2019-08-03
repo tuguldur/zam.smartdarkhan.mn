@@ -23,6 +23,18 @@ class paymentController extends Controller
         $table->string('amount');
         $table->string('status');
         */
+        $id = $req->id;
+       if($id!==0){
+        $payment =payment::find($id);
+        $payment->car_number = $req->car_number;
+        $payment->name = $req->name;
+        $payment->type = $req->type;
+        $payment->year = $req->year;
+        $payment->amount = $req->amount;
+        $payment->status = $req->status;
+        $payment->save();
+       }
+       else{
         $payment = new payment();
         $payment->car_number = $req->car_number;
         $payment->name = $req->name;
@@ -31,6 +43,7 @@ class paymentController extends Controller
         $payment->amount = $req->amount;
         $payment->status = $req->status;
         $payment->save();
+       }
         return back();
     }
     public function view(Request $req){
@@ -54,5 +67,9 @@ class paymentController extends Controller
     public function check($car_number){
         $payment = payment::where('car_number','LIKE','%'.$car_number.'%')->get();
         return response()->json($payment);
+    }
+    public function remove(Request $req){
+        $payment = payment::find($req->id)->delete();
+        return response()->json(['status' => 'true']);
     }
 }

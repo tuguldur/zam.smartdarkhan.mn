@@ -29,6 +29,7 @@ Route::post('/admin/profile', 'userController@save');
 Route::post('/admin/payment','paymentController@save');
 Route::get('/admin/payment','paymentController@view');
 Route::get('/admin/payment/{id}','paymentController@find');
+Route::delete('/admin/payment/','paymentController@remove');
 Route::get('/admin/payment/search/{search}','paymentController@search');
 
 Route::get('/check/{car_number}','paymentController@check');
