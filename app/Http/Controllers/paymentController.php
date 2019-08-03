@@ -23,9 +23,9 @@ class paymentController extends Controller
         $table->string('amount');
         $table->string('status');
         */
-        $id = $req->id;
-       if($id!==0){
-        $payment =payment::find($id);
+       $id = $req->id;
+       if($id==0){
+        $payment = new payment();
         $payment->car_number = $req->car_number;
         $payment->name = $req->name;
         $payment->type = $req->type;
@@ -35,7 +35,7 @@ class paymentController extends Controller
         $payment->save();
        }
        else{
-        $payment = new payment();
+        $payment =payment::find($id);
         $payment->car_number = $req->car_number;
         $payment->name = $req->name;
         $payment->type = $req->type;

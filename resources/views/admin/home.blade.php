@@ -96,7 +96,7 @@
                </div>
                <div class="row mb-3">
                   <div class="update ml-auto mr-auto">
-                     <button type="button" id="delete-data" class="btn bbtn-secondary btn-round d-none">Усгтах</button>
+                     <button type="button" id="delete-data" class="btn bbtn-secondary btn-round d-none">Устгах</button>
                      <button type="submit" class="btn btn-primary btn-round">Хадгалах</button>
                   </div>
                </div>
