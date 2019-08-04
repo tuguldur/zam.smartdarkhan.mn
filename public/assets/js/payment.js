@@ -1,7 +1,8 @@
 $(function() {
     function getData() {
-        console.log("Getting message");
+        console.log("Getting payment datas");
         $("#paid-loading").show();
+        $("#paid").html();
         $.get("/admin/payment/", function(data) {
             data.forEach(function(item) {
                 $("#paid").append(

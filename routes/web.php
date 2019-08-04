@@ -33,3 +33,7 @@ Route::delete('/admin/payment/','paymentController@remove');
 Route::get('/admin/payment/search/{search}','paymentController@search');
 
 Route::get('/check/{car_number}','paymentController@check');
+
+Route::get('/admin/license','licenseController@index');
+Route::post('/admin/license','licenseController@edit');
+Route::post('/license','licenseController@save');

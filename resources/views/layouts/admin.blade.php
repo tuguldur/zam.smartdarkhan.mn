@@ -135,6 +135,7 @@
 <script src="{{asset('assets/js/core/bootstrap.min.js')}}"></script>
 <script src="{{asset('assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
 <script src="{{asset('assets/js/paper-dashboard.min.js?v=2.0.0')}}" type="text/javascript"></script>
-<script src="{{asset('assets/demo/demo.js')}}"></script>
+<script src="{{asset('assets/js/payment.js')}}"></script>
+<script src="{{asset('assets/js/license.js')}}"></script>
 </body>
 </html>

@@ -397,7 +397,8 @@ p[data-f-id="pbf"] {
 .dev-modal .modal-content {
     border-radius: 16px !important;
 }
-#search-data {
+#search-data,
+#search-license {
     display: flex;
     width: 100%;
 }

@@ -1,4 +1,7 @@
 #example {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
-
+.error-list {
+    margin: 0;
+    list-style: none;
+}
