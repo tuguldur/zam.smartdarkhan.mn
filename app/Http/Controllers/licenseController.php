@@ -22,11 +22,9 @@ class licenseController extends Controller
                             ->withInput();
             }
             else {
-                $car_nb = substr($request->car_number, 0, 4);
-                $filename = $car_nb.'-'.md5(time()).'.'.request()->data->getClientOriginalExtension();
-                request()->data->move(public_path('data/upload'), $filename);
-                $path = "/data/upload/".$filename;
-
+                $file = $request->data;
+                $save = $request->file('data')->store('public/upload');
+                $path= preg_replace('/^public/', 'storage', $save);
                 $license = new license();
                 $license->car_number = $request->car_number;
                 $license->file_url = $path;
@@ -35,7 +33,6 @@ class licenseController extends Controller
 
                 return redirect()->back()->with('message','Цахим зөвшөөрөл авах хүсэлт амжилттай илгээгдлээ.');
             }
-            
     } 
     public function edit(Request $request){
         if($request->status == 'true'){
