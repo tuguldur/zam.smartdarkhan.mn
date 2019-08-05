@@ -35,7 +35,7 @@
                         {{ session()->get('message') }}
                     </div>
                     @endif
-                    <form action="/license" method="POST" enctype="multipart/form-data">
+                    <form action="/license" method="POST" enctype="multipart/form-data" id="license-form">
                         <div class="form-row">
                             <div class="col" style="width: 374px;height: 88px;margin: 2px;padding: 4px;">
                                 <div class="form-group"><label for="username" style="font-family: 'Roboto Condensed', sans-serif;color: rgb(38,33,33);"><strong>УЛСЫН</strong>&nbsp;<strong>ДУГААРАА ОРУУЛНА УУ</strong><br></label>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-primary btn-sm" type="submit" style="font-family: 'Roboto Condensed', sans-serif;background-color: rgb(47,86,200);color: rgb(255,255,255);"><strong>ИЛГЭЭХ</strong><br></button>
+                            <button class="btn btn-primary btn-sm" type="submit" id="license-submit" style="font-family: 'Roboto Condensed', sans-serif;background-color: rgb(47,86,200);color: rgb(255,255,255);"><strong>ИЛГЭЭХ</strong><br></button>
                             <a target="_blank" href="http://zero.mn/film/2622" class="btn btn-primary btn-sm" style="font-family: 'Roboto Condensed', sans-serif;background-color: rgb(47,86,200);margin: 10px;color: rgb(255,255,255);"><strong>ЗААВАР&nbsp;</strong></a>
                             <a href="/" class="btn btn-primary btn-sm" style="font-family: 'Roboto Condensed', sans-serif;background-color: rgb(47,86,200);margin: 6px;color: rgb(255,255,255);height: 45px;"><strong>ТӨЛБӨР</strong>&nbsp;ТӨЛӨХ<br><strong>&nbsp;</strong><br></a>
                         </div>

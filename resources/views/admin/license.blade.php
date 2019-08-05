@@ -7,14 +7,14 @@
          <div class="card-header d-flex">
             <h4 class="card-title mr-3">Licenses</h4>
             <div class="input-group no-border">
-               <form id="search-license">
-                  <input type="text" class="form-control" placeholder="Хайх..." id="search-license-input" required autocomplete="off">
+               <form id="search-license" action="/admin/license/search/" method="GET">
+                  <input type="text" class="form-control" name="search" placeholder="Хайх..." id="search-license-input" required autocomplete="off">
                   <div class="input-group-append">
                      <div class="input-group-text">
                         <i class="nc-icon nc-zoom-split"></i>
                      </div>
                   </div>
-                  <a href="#" class="p-3">Reset</a>
+                  <a href="/admin/license" class="p-3">Reset</a>
                </form>
             </div>
          </div>
@@ -68,7 +68,6 @@
                      @endforeach
                   </tbody>
                </table>
-               <div class="text-center m-3 d-none" id="license-loading">Loading...</div>
             </div>
          </div>
       </div>

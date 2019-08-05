@@ -36,4 +36,5 @@ Route::get('/check/{car_number}','paymentController@check');
 
 Route::get('/admin/license','licenseController@index');
 Route::post('/admin/license','licenseController@edit');
+Route::get('/admin/license/search/','licenseController@search');
 Route::post('/license','licenseController@save');

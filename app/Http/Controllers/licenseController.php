@@ -48,4 +48,11 @@ class licenseController extends Controller
         }
         else dd("some thing went wrong");
     }
+    public function search(Request $req){
+        $search = $req->search;
+        $license = license::where('id','LIKE','%'.$search.'%')
+        ->orWhere('car_number','LIKE','%'.$search.'%')
+        ->orWhere('status','LIKE','%'.$search.'%')->get();
+        return view('admin/license',["licenses"=>$license]);
+    }
 }

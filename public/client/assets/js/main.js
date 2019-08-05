@@ -41,4 +41,7 @@
                 `<small class="form-text" style="color: rgb(235,13,13);font-family: 'Roboto Condensed', sans-serif;font-size: 16px;margin: -1px;"><strong>ДУГААРАА ЗӨВ ОРУУЛНА УУ</strong></small>`
             );
     });
+    $("#license-form").on("submit", function(e) {
+        $("#license-submit").attr("disabled", true);
+    });
 })(jQuery);
