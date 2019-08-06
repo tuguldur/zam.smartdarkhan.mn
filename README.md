@@ -23,7 +23,7 @@ php artisan storage:link
 
 ```
 Route: /admin
-email: admin@admin.com
+email: smartcity.gov@gmail.com
 password: Password
 ```
 

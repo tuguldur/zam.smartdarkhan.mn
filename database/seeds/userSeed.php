@@ -13,8 +13,8 @@ class userSeed extends Seeder
     public function run()
     {
         $user = new User();
-        $user->name = Str::random(10);
-        $user->email = 'admin@admin.com';
+        $user->name = 'ДОНЗТ-ЦАХИМ САН';
+        $user->email = 'smartcity.gov@gmail.com';
         $user->password = bcrypt('Password');
         $user->created_at = Carbon::now()->format('Y-m-d H:i:s');
         $user->updated_at = Carbon::now()->format('Y-m-d H:i:s');
