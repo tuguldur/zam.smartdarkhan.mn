@@ -24,7 +24,7 @@ class licenseController extends Controller
             else {
                 $file = $request->data;
                 $save = $request->file('data')->store('public/upload');
-                $path= preg_replace('/^public/', 'storage', $save);
+                $path= preg_replace('/^public/', 'storage/app/public', $save);
                 $license = new license();
                 $license->car_number = $request->car_number;
                 $license->file_url = $path;
